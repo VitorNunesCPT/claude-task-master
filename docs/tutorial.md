@@ -2,51 +2,6 @@
 
 This tutorial will guide you through setting up and using Task Master for AI-driven development.
 
-## Initial Setup
-
-There are two ways to set up Task Master: using MCP (recommended) or via npm installation.
-
-### Option 1: Using MCP (Recommended)
-
-MCP (Model Control Protocol) provides the easiest way to get started with Task Master directly in your editor.
-
-1. **Install the package**
-
-```bash
-npm i -g task-master-ai
-```
-
-2. **Add the MCP config to your IDE/MCP Client** (Cursor is recommended, but it works with other clients):
-
-```json
-{
-  "mcpServers": {
-    "taskmaster-ai": {
-      "command": "npx",
-      "args": ["-y", "--package=task-master-ai", "task-master-ai"],
-      "env": {
-        "ANTHROPIC_API_KEY": "YOUR_ANTHROPIC_API_KEY_HERE",
-        "PERPLEXITY_API_KEY": "YOUR_PERPLEXITY_API_KEY_HERE",
-        "OPENAI_API_KEY": "YOUR_OPENAI_KEY_HERE",
-        "GOOGLE_API_KEY": "YOUR_GOOGLE_KEY_HERE",
-        "MISTRAL_API_KEY": "YOUR_MISTRAL_KEY_HERE",
-        "OPENROUTER_API_KEY": "YOUR_OPENROUTER_KEY_HERE",
-        "XAI_API_KEY": "YOUR_XAI_KEY_HERE",
-        "AZURE_OPENAI_API_KEY": "YOUR_AZURE_KEY_HERE"
-      }
-    }
-  }
-}
-```
-
-**IMPORTANT:** An API key is _required_ for each AI provider you plan on using. Run the `task-master models` command to see your selected models and the status of your API keys across .env and mcp.json
-
-**To use AI commands in CLI** you MUST have API keys in the .env file
-**To use AI commands in MCP** you MUST have API keys in the .mcp.json file (or MCP config equivalent)
-
-We recommend having keys in both places and adding mcp.json to your gitignore so your API keys aren't checked into git.
-
-3. **Enable the MCP** in your editor settings
 
 4. **Prompt the AI** to initialize Task Master:
 
@@ -114,7 +69,6 @@ task-master generate
 
 ## Setting up Cursor AI Integration
 
-Task Master is designed to work seamlessly with [Cursor AI](https://www.cursor.so/), providing a structured workflow for AI-driven development.
 
 ### Using Cursor with MCP (Recommended)
 
