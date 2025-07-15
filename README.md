@@ -122,12 +122,5 @@ task-master generate
 task-master rules add windsurf,roo,vscode
 ```
 
-## Claude Code Support
-
-Task Master now supports Claude models through the Claude Code CLI, which requires no API key:
-
-- **Models**: `claude-code/opus` and `claude-code/sonnet`
-- **Requirements**: Claude Code CLI installed
-- **Benefits**: No API key needed, uses your local Claude instance
 
 [Learn more about Claude Code setup](docs/examples/claude-code-usage.md)
