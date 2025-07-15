@@ -52,20 +52,6 @@ npx task-master init
 
 This will prompt you for project details and set up a new project with the necessary files and structure.
 
-### Important Notes
-
-1. **ES Modules Configuration:**
-
-   - This project uses ES Modules (ESM) instead of CommonJS.
-   - This is set via `"type": "module"` in your package.json.
-   - Use `import/export` syntax instead of `require()`.
-   - Files should use `.js` or `.mjs` extensions.
-   - To use a CommonJS module, either:
-     - Rename it with `.cjs` extension
-     - Use `await import()` for dynamic imports
-   - If you need CommonJS throughout your project, remove `"type": "module"` from package.json, but Task Master scripts expect ESM.
-
-2. The Anthropic SDK version should be 0.39.0 or higher.
 
 ## Quick Start with Global Commands
 
@@ -133,20 +119,6 @@ Claude Task Master is designed to work seamlessly with [Cursor AI](https://www.c
 3. Place your PRD document in the `scripts/` directory (e.g., `scripts/prd.txt`)
 4. Open Cursor's AI chat and switch to Agent mode
 
-### Setting up MCP in Cursor
-
-To enable enhanced task management capabilities directly within Cursor using the Model Control Protocol (MCP):
-
-1. Go to Cursor settings
-2. Navigate to the MCP section
-3. Click on "Add New MCP Server"
-4. Configure with the following details:
-   - Name: "Task Master"
-   - Type: "Command"
-   - Command: "npx -y task-master-ai"
-5. Save the settings
-
-Once configured, you can interact with Task Master's task management commands directly through Cursor's interface, providing a more integrated experience.
 
 ### Initial Task Generation
 
