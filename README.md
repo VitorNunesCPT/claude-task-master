@@ -1,36 +1,3 @@
-# Task Master
-
-A task management system for AI-driven development with Claude, designed to work seamlessly with Cursor AI.
-
-## Documentation
-
-For more detailed information, check out the documentation in the `docs` directory:
-
-- [Configuration Guide](docs/configuration.md) - Set up environment variables and customize Task Master
-- [Tutorial](docs/tutorial.md) - Step-by-step guide to getting started with Task Master
-- [Command Reference](docs/command-reference.md) - Complete list of all available commands
-- [Task Structure](docs/task-structure.md) - Understanding the task format and features
-- [Example Interactions](docs/examples.md) - Common Cursor AI interaction examples
-- [Migration Guide](docs/migration-guide.md) - Guide to migrating to the new project structure
-
-
-## Quick Start
-
-#### 3. (Optional) Configure the models you want to use
-
-In your editor's AI chat pane, say:
-
-```txt
-Change the main, research and fallback models to <model_name>, <model_name> and <model_name> respectively.
-```
-
-For example, to use Claude Code (no API key required):
-```txt
-Change the main model to claude-code/sonnet
-```
-
-[Table of available models](docs/models.md) | [Claude Code setup](docs/examples/claude-code-usage.md)
-
 #### 4. Initialize Task Master
 
 In your editor's AI chat pane, say:
@@ -65,32 +32,6 @@ Use your AI assistant to:
 - **Research fresh information**: `Research the latest best practices for implementing JWT authentication with Node.js`
 - **Research with context**: `Research React Query v5 migration strategies for our current API implementation in src/api.js`
 
-[More examples on how to use Task Master in chat](docs/examples.md)
-
-### Option 2: Using Command Line
-
-#### Installation
-
-```bash
-# Install globally
-npm install -g task-master-ai
-
-# OR install locally within your project
-npm install task-master-ai
-```
-
-#### Initialize a new project
-
-```bash
-# If installed globally
-task-master init
-
-# If installed locally
-npx task-master init
-
-# Initialize project with specific rules
-task-master init --rules cursor,windsurf,vscode
-```
 
 This will prompt you for project details and set up a new project with the necessary files and structure.
 
@@ -124,3 +65,66 @@ task-master rules add windsurf,roo,vscode
 
 
 [Learn more about Claude Code setup](docs/examples/claude-code-usage.md)
+
+# Taskmaster AI Installation Guide
+
+This guide helps AI assistants install and configure Taskmaster for users in their development projects.
+
+## What is Taskmaster?
+
+Taskmaster is an AI-driven task management system designed for development workflows. It helps break down projects into manageable tasks, track dependencies, and maintain development momentum through structured, AI-enhanced planning.
+
+### Step 3: Initialize Project
+
+Once the MCP server is configured and API keys are added, initialize Taskmaster in the user's project:
+
+> Can you initialize Task Master in my project?
+
+This will run the `initialize_project` tool to set up the basic file structure.
+
+### Step 4: Create Initial Tasks
+
+Users have two options for creating initial tasks:
+
+**Option A: Parse a PRD (Recommended)**
+If they have a Product Requirements Document:
+
+> Can you parse my PRD file at [path/to/prd.txt] to generate initial tasks?
+
+If the user does not have a PRD, the AI agent can help them create one and store it in scripts/prd.txt for parsing.
+
+**Option B: Start from scratch**
+
+> Can you help me add my first task: [describe the task]
+
+## Common Usage Patterns
+
+### Daily Workflow
+
+> What's the next task I should work on?
+> Can you show me the details for task [ID]?
+> Can you mark task [ID] as done?
+
+### Task Management
+
+> Can you break down task [ID] into subtasks?
+> Can you add a new task: [description]
+> Can you analyze the complexity of my tasks?
+
+### Project Organization
+
+> Can you show me all my pending tasks?
+> Can you move task [ID] to become a subtask of [parent ID]?
+> Can you update task [ID] with this new information: [details]
+
+
+## Next Steps
+
+Once installed, users can:
+
+- Create new tasks with `add-task` or parse a PRD (scripts/prd.txt) into tasks with `parse-prd`
+- Set up model preferences with `models` tool
+- Expand tasks into subtasks with `expand-all` and `expand-task`
+- Explore advanced features like research mode and complexity analysis
+
+For detailed documentation, refer to the Task Master docs directory.``
