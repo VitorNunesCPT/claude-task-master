@@ -18,20 +18,27 @@ const sidebars: SidebarsConfig = {
     'README',
     {
       type: 'category',
-      label: 'Começando',
+      label: 'Getting Started',
       items: [
+        'configuration',
         'tutorial',
-        'examples',
       ],
     },
     {
       type: 'category',
-      label: 'Referência',
+      label: 'Reference',
       items: [
         'command-reference',
         'task-structure',
-        'configuration',
         'models',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Examples & Licensing',
+      items: [
+        'examples',
+        'licensing',
       ],
     },
     {
@@ -44,10 +51,37 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'Avançado',
+      label: 'Advanced',
       items: [
         'migration-guide',
-        'licensing',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Contributor Documentation',
+      items: [
+        'contributor-docs/testing-roo-integration',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Examples',
+      items: [
+        'examples/claude-code-usage',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Providers',
+      items: [
+        'providers/gemini-cli',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Scripts',
+      items: [
+        'scripts/models-json-to-markdown',
       ],
     },
   ],

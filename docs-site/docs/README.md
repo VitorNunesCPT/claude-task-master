@@ -1,35 +1,29 @@
 ---
 id: README
-title: Bem-vindo ao Task Master AI
-sidebar_label: Início
+title: Task Master Documentation
+sidebar_label: Documentation
 ---
 
-# Task Master AI
+# Task Master Documentation
 
-Bem-vindo à documentação do Task Master AI - um sistema de gerenciamento de tarefas para desenvolvimento ambicioso orientado por IA que não sobrecarrega e confunde o Cursor.
+Welcome to the Task Master documentation. Use the links below to navigate to the information you need:
 
-## 🚀 Começando
+## Getting Started
 
-- **[Tutorial](tutorial.md)** - Guia passo a passo para começar com o Task Master
-- **[Exemplos](examples.md)** - Exemplos comuns de interações com IA no Cursor
+- [Configuration Guide](configuration.md) - Set up environment variables and customize Task Master
+- [Tutorial](tutorial.md) - Step-by-step guide to getting started with Task Master
 
-## 📚 Referência
+## Reference
 
-- **[Referência de Comandos](command-reference.md)** - Lista completa de todos os comandos disponíveis
-- **[Estrutura de Tarefas](task-structure.md)** - Entendendo o formato e recursos das tarefas
-- **[Configuração](configuration.md)** - Configurar variáveis de ambiente e personalizar o Task Master
-- **[Modelos Disponíveis](models.md)** - Lista completa de modelos de IA e provedores suportados
+- [Command Reference](command-reference.md) - Complete list of all available commands (including research and multi-task viewing)
+- [Task Structure](task-structure.md) - Understanding the task format and features
+- [Available Models](models.md) - Complete list of supported AI models and providers
 
-## 🔧 MCP (Model Context Protocol)
+## Examples & Licensing
 
-- **[Provedor MCP](mcp-provider.md)** - Informações sobre o provedor MCP
-- **[Guia do Provedor MCP](mcp-provider-guide.md)** - Guia detalhado para integração MCP
+- [Example Interactions](examples.md) - Common Cursor AI interaction examples  
+- [Licensing Information](licensing.md) - Detailed information about the license
 
-## 📖 Avançado
+## Need More Help?
 
-- **[Guia de Migração](migration-guide.md)** - Como migrar de versões anteriores
-- **[Informações de Licenciamento](licensing.md)** - Informações detalhadas sobre a licença
-
-## 🤝 Precisa de Mais Ajuda?
-
-Se você não encontrar o que está procurando nesta documentação, verifique o [README principal](../README.md) ou visite nosso [repositório no GitHub](https://github.com/eyaltoledano/claude-task-master).
+If you can't find what you're looking for in these docs, please check the [main README](https://github.com/eyaltoledano/claude-task-master/blob/main/README.md) or visit our [GitHub repository](https://github.com/eyaltoledano/claude-task-master).
