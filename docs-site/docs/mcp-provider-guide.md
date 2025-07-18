@@ -72,34 +72,24 @@ Add MCP provider to your `.taskmaster/config.json`:
 
 - **`claude-3-5-sonnet-20241022`** - High-performance model for general tasks
   - **SWE Score**: 0.49
+  - **Cost**: $0 (session-based)
+  - **Max Tokens**: 200,000
+  - **Supported Roles**: main, research, fallback
   - **Features**: Text + Object generation
 
 - **`claude-3-opus-20240229`** - Enhanced reasoning model for complex tasks  
   - **SWE Score**: 0.725
+  - **Cost**: $0 (session-based)
+  - **Max Tokens**: 200,000
+  - **Supported Roles**: main, research, fallback
   - **Features**: Text + Object generation
 
 - **`mcp-sampling`** - General text generation using MCP client sampling
-  - **SWE Score**: null
-  - **Roles**: Supports main, research, and fallback roles
   - **SWE Score**: 0.49
   - **Cost**: $0 (session-based)
   - **Max Tokens**: 200,000
   - **Supported Roles**: main, research, fallback
   - **Features**: Text + Object generation
-
-- **`claude-3-opus-20240229`** - Enhanced reasoning model for complex tasks  
-  - **SWE Score**: 0.725
-  - **Cost**: $0 (session-based)
-  - **Max Tokens**: 200,000
-  - **Supported Roles**: main, research, fallback
-  - **Features**: Text + Object generation
-
-**Basic MCP Provider Models:**
-
-- **`mcp-sampling`** - General text generation using MCP client sampling
-- **`mcp-sampling`** - General text generation using MCP client sampling
-  - **SWE Score**: null
-  - **Roles**: Supports main, research, and fallback roles
 
 ### Model ID Format
 
