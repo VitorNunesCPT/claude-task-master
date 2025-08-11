@@ -1,0 +1,16 @@
+{
+  "footer.links.0.title": "Documentos",
+  "footer.links.0.items.0.label": "Tutorial",
+  "footer.links.1.title": "Comunidade",
+  "footer.links.1.items.0.label": "Stack Overflow",
+  "footer.links.1.items.1.label": "Discord",
+  "footer.links.1.items.2.label": "X",
+  "footer.links.2.title": "Mais",
+  "footer.links.2.items.0.label": "Blog",
+  "footer.links.2.items.1.label": "GitHub",
+  "footer.copyright": "Copyright © 2024 Minha Empresa, Inc. Construído com Docusaurus.",
+  "navbar.item.label.Tutorial": "Tutorial",
+  "navbar.item.label.Taskmaster Docs": "Documentação do Taskmaster",
+  "navbar.item.label.Blog": "Blog",
+  "navbar.item.label.GitHub": "GitHub"
+}
