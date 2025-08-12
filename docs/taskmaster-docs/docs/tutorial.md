@@ -112,43 +112,6 @@ task-master next
 task-master generate
 ```
 
-## Setting up Cursor AI Integration
-
-Task Master is designed to work seamlessly with [Cursor AI](https://www.cursor.so/), providing a structured workflow for AI-driven development.
-
-### Using Cursor with MCP (Recommended)
-
-If you've already set up Task Master with MCP in Cursor, the integration is automatic. You can simply use natural language to interact with Task Master:
-
-```
-What tasks are available to work on next?
-Can you analyze the complexity of our tasks?
-I'd like to implement task 4. What does it involve?
-```
-
-### Manual Cursor Setup
-
-If you're not using MCP, you can still set up Cursor integration:
-
-1. After initializing your project, open it in Cursor
-2. The `.cursor/rules/dev_workflow.mdc` file is automatically loaded by Cursor, providing the AI with knowledge about the task management system
-3. Place your PRD document in the `.taskmaster/docs/` directory (e.g., `.taskmaster/docs/prd.txt`)
-4. Open Cursor's AI chat and switch to Agent mode
-
-### Alternative MCP Setup in Cursor
-
-You can also set up the MCP server in Cursor settings:
-
-1. Go to Cursor settings
-2. Navigate to the MCP section
-3. Click on "Add New MCP Server"
-4. Configure with the following details:
-   - Name: "Task Master"
-   - Type: "Command"
-   - Command: "npx -y --package=task-master-ai task-master-ai"
-5. Save the settings
-
-Once configured, you can interact with Task Master's task management commands directly through Cursor's interface, providing a more integrated experience.
 
 ## Initial Task Generation
 

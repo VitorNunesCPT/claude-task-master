@@ -1,14 +1,6 @@
 # Task Master AI - Agent Integration Guide
 
 ## Essential Commands
-#### 4. Initialize Task Master
-
-In your editor's AI chat pane, say:
-
-```txt
-Initialize taskmaster-ai in my project
-```
-
 #### 5. Make sure you have a PRD (Recommended)
 
 For **new projects**: Create your PRD at `.taskmaster/docs/prd.txt`  
