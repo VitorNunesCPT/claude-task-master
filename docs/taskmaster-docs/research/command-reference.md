@@ -1,4 +1,4 @@
-# Task Master Command Reference
+# Command Reference
 
 Here's a comprehensive reference of all available commands:
 
@@ -299,6 +299,7 @@ task-master delete-tag <tag-name> --yes
 ```
 
 **Tag Context:**
+
 - All task operations (list, show, add, update, etc.) work within the currently active tag
 - Use `--tag=<name>` flag with most commands to operate on a specific tag context
 - Tags provide complete isolation - tasks in different tags don't interfere with each other
