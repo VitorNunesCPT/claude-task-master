@@ -8,44 +8,6 @@ Taskmaster is an AI-driven task management system designed for development workf
 
 ## Installation Steps
 
-### Step 1: Add MCP Configuration
-
-Add the following configuration to the user's MCP settings file (`.cursor/mcp.json` for Cursor, or equivalent for other editors):
-
-```json
-{
-	"mcpServers": {
-		"taskmaster-ai": {
-			"command": "npx",
-			"args": ["-y", "--package=task-master-ai", "task-master-ai"],
-			"env": {
-				"ANTHROPIC_API_KEY": "user_will_add_their_key_here",
-				"PERPLEXITY_API_KEY": "user_will_add_their_key_here",
-				"OPENAI_API_KEY": "user_will_add_their_key_here",
-				"GOOGLE_API_KEY": "user_will_add_their_key_here",
-				"MISTRAL_API_KEY": "user_will_add_their_key_here",
-				"OPENROUTER_API_KEY": "user_will_add_their_key_here",
-				"XAI_API_KEY": "user_will_add_their_key_here"
-			}
-		}
-	}
-}
-```
-
-### Step 2: API Key Requirements
-
-Inform the user they need **at least one** API key from the following providers:
-
-- **Anthropic** (for Claude models) - Recommended
-- **OpenAI** (for GPT models)
-- **Google** (for Gemini models)
-- **Perplexity** (for research features) - Highly recommended
-- **Mistral** (for Mistral models)
-- **OpenRouter** (access to multiple models)
-- **xAI** (for Grok models)
-
-The user will be able to define 3 separate roles (can be the same provider or separate providers) for main AI operations, research operations (research providers/models only), and a fallback model in case of errors.
-
 ### Step 3: Initialize Project
 
 Once the MCP server is configured and API keys are added, initialize Taskmaster in the user's project:

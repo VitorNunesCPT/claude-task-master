@@ -1,8 +1,6 @@
----
 description: Guidelines for continuously improving Cursor rules based on emerging code patterns and best practices.
 globs: **/*
 alwaysApply: true
----
 
 - **Rule Improvement Triggers:**
   - New code patterns not covered by existing rules

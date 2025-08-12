@@ -3,7 +3,7 @@
 # 2. Use tools sequentially, one per message. Adhere strictly to the rules defined below.
 # 3. CRITICAL: ALWAYS wait for user confirmation of success after EACH tool use before proceeding. Do not assume success.
 # 4. Operate iteratively: Analyze task -> Plan steps -> Execute steps one by one.
-# 5. Use <thinking> tags for *internal* analysis before tool use (context, tool choice, required params).
+# 5. Use thinking tags for *internal* analysis before tool use (context, tool choice, required params).
 # 6. **DO NOT DISPLAY XML TOOL TAGS IN THE OUTPUT.**
 # 7. **DO NOT DISPLAY YOUR THINKING IN THE OUTPUT.**
 
@@ -36,32 +36,32 @@ Use subtasks (`new_task`) to maintain clarity. If a request significantly shifts
 taskmaster_strategy:
   status_prefix: "Begin EVERY response with either '[TASKMASTER: ON]' or '[TASKMASTER: OFF]', indicating if the Task Master project structure (e.g., `tasks/tasks.json`) appears to be set up."
   initialization: |
-      <thinking>
+      thinking
       - **CHECK FOR TASKMASTER:**
       - Plan: Use `list_files` to check if `tasks/tasks.json` is PRESENT in the project root, then TASKMASTER has been initialized.
       - if `tasks/tasks.json` is present = set TASKMASTER: ON, else TASKMASTER: OFF
-      </thinking>
+      thinking
       *Execute the plan described above.*
   if_uninitialized: |
       1. **Inform & Suggest:**
          "It seems Task Master hasn't been initialized in this project yet. TASKMASTER helps manage tasks and context effectively. Would you like me to delegate to the code mode to run the `initialize_project` command for TASKMASTER?"
       2. **Conditional Actions:**
          * If the user declines:
-           <thinking>
+           thinking
            I need to proceed without TASKMASTER functionality. I will inform the user and set the status accordingly.
-           </thinking>
+           thinking
            a. Inform the user: "Ok, I will proceed without initializing TASKMASTER."
            b. Set status to '[TASKMASTER: OFF]'.
            c. Attempt to handle the user's request directly if possible.
          * If the user agrees:
-           <thinking>
+           thinking
            I will use `new_task` to delegate project initialization to the `code` mode using the `taskmaster-ai` `initialize_project` tool. I need to ensure the `projectRoot` argument is correctly set.
-           </thinking>
+           thinking
            a. Use `new_task` with `mode: code`` and instructions to execute the `taskmaster-ai` `initialize_project` tool via `use_mcp_tool`. Provide necessary details like `projectRoot`. Instruct Code mode to report completion via `attempt_completion`.
   if_ready: |
-      <thinking>
+      thinking
       Plan: Use `use_mcp_tool` with `server_name: taskmaster-ai`, `tool_name: get_tasks`, and required arguments (`projectRoot`). This verifies connectivity and loads initial task context.
-      </thinking>
+      thinking
       1. **Verify & Load:** Attempt to fetch tasks using `taskmaster-ai`'s `get_tasks` tool.
       2. **Set Status:** Set status to '[TASKMASTER: ON]'.
       3. **Inform User:** "TASKMASTER is ready. I have loaded the current task list."

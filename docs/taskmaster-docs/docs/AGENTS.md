@@ -1,6 +1,42 @@
 # Task Master AI - Agent Integration Guide
 
 ## Essential Commands
+#### 4. Initialize Task Master
+
+In your editor's AI chat pane, say:
+
+```txt
+Initialize taskmaster-ai in my project
+```
+
+#### 5. Make sure you have a PRD (Recommended)
+
+For **new projects**: Create your PRD at `.taskmaster/docs/prd.txt`  
+For **existing projects**: You can use `scripts/prd.txt` or migrate with `task-master migrate`
+
+An example PRD template is available after initialization in `.taskmaster/templates/example_prd.txt`.
+
+> [!NOTE]
+> While a PRD is recommended for complex projects, you can always create individual tasks by asking "Can you help me implement [description of what you want to do]?" in chat.
+
+**Always start with a detailed PRD.**
+
+The more detailed your PRD, the better the generated tasks will be.
+
+#### 6. Common Commands
+
+Use your AI assistant to:
+
+- Parse requirements: `Can you parse my PRD at scripts/prd.txt?`
+- Plan next step: `What's the next task I should work on?`
+- Implement a task: `Can you help me implement task 3?`
+- View multiple tasks: `Can you show me tasks 1, 3, and 5?`
+- Expand a task: `Can you help me expand task 4?`
+- **Research fresh information**: `Research the latest best practices for implementing JWT authentication with Node.js`
+- **Research with context**: `Research React Query v5 migration strategies for our current API implementation in src/api.js`
+
+[More examples on how to use Task Master in chat](docs/examples.md) 
+
 
 ### Core Workflow Commands
 
@@ -35,72 +71,7 @@ task-master validate-dependencies                            # Check for depende
 task-master generate                                         # Update task markdown files (usually auto-called)
 ```
 
-## Key Files & Project Structure
-
-### Core Files
-
-- `.taskmaster/tasks/tasks.json` - Main task data file (auto-managed)
-- `.taskmaster/config.json` - AI model configuration (use `task-master models` to modify)
-- `.taskmaster/docs/prd.txt` - Product Requirements Document for parsing
-- `.taskmaster/tasks/*.txt` - Individual task files (auto-generated from tasks.json)
-- `.env` - API keys for CLI usage
-
-### Claude Code Integration Files
-
-- `CLAUDE.md` - Auto-loaded context for Claude Code (this file)
-- `.claude/settings.json` - Claude Code tool allowlist and preferences
-- `.claude/commands/` - Custom slash commands for repeated workflows
-- `.mcp.json` - MCP server configuration (project-specific)
-
-### Directory Structure
-
-```
-project/
-├── .taskmaster/
-│   ├── tasks/              # Task files directory
-│   │   ├── tasks.json      # Main task database
-│   │   ├── task-1.md      # Individual task files
-│   │   └── task-2.md
-│   ├── docs/              # Documentation directory
-│   │   ├── prd.txt        # Product requirements
-│   ├── reports/           # Analysis reports directory
-│   │   └── task-complexity-report.json
-│   ├── templates/         # Template files
-│   │   └── example_prd.txt  # Example PRD template
-│   └── config.json        # AI models & settings
-├── .claude/
-│   ├── settings.json      # Claude Code configuration
-│   └── commands/         # Custom slash commands
-├── .env                  # API keys
-├── .mcp.json            # MCP configuration
-└── CLAUDE.md            # This file - auto-loaded by Claude Code
-```
-
 ## MCP Integration
-
-Task Master provides an MCP server that Claude Code can connect to. Configure in `.mcp.json`:
-
-```json
-{
-  "mcpServers": {
-    "task-master-ai": {
-      "command": "npx",
-      "args": ["-y", "--package=task-master-ai", "task-master-ai"],
-      "env": {
-        "ANTHROPIC_API_KEY": "your_key_here",
-        "PERPLEXITY_API_KEY": "your_key_here",
-        "OPENAI_API_KEY": "OPENAI_API_KEY_HERE",
-        "GOOGLE_API_KEY": "GOOGLE_API_KEY_HERE",
-        "XAI_API_KEY": "XAI_API_KEY_HERE",
-        "OPENROUTER_API_KEY": "OPENROUTER_API_KEY_HERE",
-        "MISTRAL_API_KEY": "MISTRAL_API_KEY_HERE",
-        "AZURE_OPENAI_API_KEY": "AZURE_OPENAI_API_KEY_HERE",
-        "OLLAMA_API_KEY": "OLLAMA_API_KEY_HERE"
-      }
-    }
-  }
-}
-```
 
 ### Essential MCP Tools
 
@@ -224,20 +195,6 @@ Add to `.claude/settings.json`:
 ```
 
 ## Configuration & Setup
-
-### API Keys Required
-
-At least **one** of these API keys must be configured:
-
-- `ANTHROPIC_API_KEY` (Claude models) - **Recommended**
-- `PERPLEXITY_API_KEY` (Research features) - **Highly recommended**
-- `OPENAI_API_KEY` (GPT models)
-- `GOOGLE_API_KEY` (Gemini models)
-- `MISTRAL_API_KEY` (Mistral models)
-- `OPENROUTER_API_KEY` (Multiple models)
-- `XAI_API_KEY` (Grok models)
-
-An API key is required for any provider used across any of the 3 roles defined in the `models` command.
 
 ### Model Configuration
 
